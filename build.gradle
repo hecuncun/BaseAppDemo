@@ -1,13 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
+apply from: "conf.gradle"//mvp添加
 buildscript {
     
     repositories {
         google()
         jcenter()
+        maven {//mvp添加
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'//mvp里引入
         
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -17,8 +22,14 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()//mvp添加
         google()
+        maven {//mvp添加
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 

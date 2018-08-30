@@ -1,7 +1,9 @@
-package com.study.hcc.baseappdemo;
+package com.study.hcc.baseappdemo.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.study.hcc.baseappdemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
